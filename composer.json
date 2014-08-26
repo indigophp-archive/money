@@ -1,0 +1,31 @@
+{
+    "name": "indigophp/money",
+    "description": "Value Object implementation of Fowler's Money pattern",
+    "license": "MIT",
+    "keywords": ["money", "Value Object"],
+    "homepage": "https://indigophp.com",
+    "authors": [
+        {
+            "name": "Márk Sági-Kazár",
+            "email": "mark.sagikazar@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "indigophp/comparison": "dev-develop"
+    },
+    "require-dev": {
+        "ext-intl": "*",
+        "codeception/codeception": "~2.0.0"
+    },
+    "suggest": {
+        "ext-intl": "Used for formatting Money with IntlFormatter"
+    },
+    "autoload": {
+        "psr-4": {
+            "Indigo\\Money\\": "src/"
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
