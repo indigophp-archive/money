@@ -70,32 +70,6 @@ final class Currency
     }
 
     /**
-     * Checks whether this currency is the same as another
-     *
-     * @param Currency $currency
-     *
-     * @return boolean
-     */
-    public function isSame(Currency $currency)
-    {
-        return $this->code === $currency->getCode();
-    }
-
-    /**
-     * Asserts same currencies
-     *
-     * @param Currency $currency
-     *
-     * @throws InvalidArgumentException If the currencies are not the same
-     */
-    public function assertSame(Currency $currency)
-    {
-        if (!$this->isSame($currency)) {
-            throw new \InvalidArgumentException('Currencies does not match');
-        }
-    }
-
-    /**
      * Alias to getCode()
      *
      * @return string
