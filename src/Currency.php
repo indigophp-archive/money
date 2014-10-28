@@ -18,9 +18,6 @@ namespace Indigo\Money;
  */
 final class Currency
 {
-    use \Indigo\Comparison\AssertSameTrait;
-    use \Indigo\Comparison\SameTrait;
-
     /**
      * Currency code
      *
@@ -67,6 +64,52 @@ final class Currency
     public function getDeclaration()
     {
         return $this->declaration;
+    }
+
+    /**
+     * Returns the sub unit
+     *
+     * @return integer
+     */
+    public function getSubUnit()
+    {
+        return $this->declaration['sub_unit'];
+    }
+
+    /**
+     * Returns the name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->declaration['name'];
+    }
+
+    /**
+     * Checks if this object should be considered to be the same as the other
+     *
+     * @param Currency $currency
+     *
+     * @return boolean
+     */
+    public function isSame(Currency $currency)
+    {
+        return $this->code === $currency->getCode();
+    }
+
+    /**
+     * Asserts that the other object is the same as this
+     *
+     * @param Currency $currency
+     *
+     * @throws AssertionFailedException If assertion fails
+     */
+    public function assertSame(Currency $currency)
+    {
+        if (!$this->isSame($currency)) {
+            throw new \InvalidArgumentException('Failed asserting that the two values are the same.');
+        }
     }
 
     /**

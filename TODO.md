@@ -1,3 +1,4 @@
 # TODO
 
-- [ ] Create a primitive implementation of integer
+- [ ] Handle string currency or not
+- [ ] Implement Currency Repository

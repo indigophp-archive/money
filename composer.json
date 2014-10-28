@@ -11,8 +11,7 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "indigophp/comparison": "dev-develop"
+        "php": ">=5.4.0"
     },
     "require-dev": {
         "ext-intl": "*",
